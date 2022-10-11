@@ -1,9 +1,23 @@
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
+import Home from './components/Home/Home';
+import Main from './layout/Main';
+import ErrorPage from './components/ErrorPage/ErrorPage'
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
+      children: [
+        { path: '/', element: <Home></Home> },
+      ]
+    },
+  ]);
   return (
     <div className="App">
-      <h1>README FILE UPDATED</h1>
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }

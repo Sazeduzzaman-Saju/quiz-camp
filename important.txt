@@ -1,0 +1,20 @@
+# quiz-crackerz-Assignment
+
+Please create yoru private repo 
+## [https://classroom.github.com/a/Ob89RIqo](https://classroom.github.com/a/Ob89RIqo)
+
+### Private Repo Link: [https://classroom.github.com/a/Ob89RIqo](https://classroom.github.com/a/Ob89RIqo)
+
+## QUIZ API LINK: 
+Get all quiz topics: https://openapi.programming-hero.com/api/quiz
+
+Get topic details by topic id: https://openapi.programming-hero.com/api/quiz/${id}
+
+Example: https://openapi.programming-hero.com/api/quiz/1 
+
+Netlify WebApp Link : https://quizcamp-react.netlify.app/
+GitHub Repository Link : https://github.com/programming-hero-web-course2/b6-quiz-crackerz-Sazeduzzzaman
+
+
+--main-color: #0b5eb1;
+--secondary-color: #5E17EB;
