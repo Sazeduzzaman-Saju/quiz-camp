@@ -1,0 +1,49 @@
+.hero-info h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+.hero-info p {
+  text-align: justify;
+}
+.hero-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btns {
+  border: none;
+  background-color: var(--secondary-color);
+  padding: 10px 20px;
+  color: white;
+  border-radius: 5px;
+}
+.btns:hover {
+  background-color: var(--main-color);
+  transition: 0.6s;
+}
+
+.hero-img {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+.hero-img {
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
