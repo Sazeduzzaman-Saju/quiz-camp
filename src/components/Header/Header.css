@@ -10,7 +10,8 @@
 }
 .active {
   color: white !important;
-  background-color: blueviolet;
+  background-color: var(--secondary-color);
+  border-radius: 3px;
   transition: 0.6s;
 }
 .header {

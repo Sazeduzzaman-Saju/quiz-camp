@@ -16,7 +16,7 @@ const ErrorPage = () => {
                         <h3 className='mb-5 fw-bold'>Awww... Don't Cry.</h3>
                         <p className='mb-5 fw-bold'>It's Just A 404 Page</p>
                         <p className='fw-semibold'>What you'r looking for may have<br /> been misplaced in long term memory!!</p>
-                        <Link to={'/'}><button >Back Home</button></Link>
+                        <Link to={'/'}><button className='btns' >Back Home</button></Link>
                     </div>
                 </div>
             </section>

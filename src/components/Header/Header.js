@@ -8,7 +8,7 @@ function Header() {
     return (
         <>
             <div>
-                <p className='p-2 m-0 text-center text-white top-tool'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, sit.</p>
+                <p className='p-2 m-0 text-center text-white top-tool text-uppercase'>Test Your Skill With us with quiz camp</p>
             </div>
             <div className='header'>
                 <div className=''>
@@ -25,9 +25,9 @@ function Header() {
                                     navbarScroll
                                 >
                                     <NavLink to="home">Home</NavLink>
-                                    <NavLink to="topics">Product</NavLink>
-                                    <NavLink to="statistic">About</NavLink>
-                                    <NavLink to="blog">Contact</NavLink>
+                                    <NavLink to="topics">Topics</NavLink>
+                                    <NavLink to="statistic">Statistic</NavLink>
+                                    <NavLink to="blog">Blog</NavLink>
                                 </Nav>
                                 <div>
                                     <i class="fa-duotone fa-user"></i><span className='ms-2'>User</span>
