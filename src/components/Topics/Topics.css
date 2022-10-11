@@ -1,0 +1,10 @@
+.topics-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.topics-headline {
+  color: var(--secondary-color);
+  font-size: 3rem;
+  font-weight: 600;
+}

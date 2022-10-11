@@ -1,0 +1,24 @@
+.topics-details {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.topics-info {
+  display: flex;
+  justify-content: space-between;
+}
+.practice-button-area {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.practice-info-area {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.cards {
+  background-color: var(--secondary-color);
+  border: none;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
