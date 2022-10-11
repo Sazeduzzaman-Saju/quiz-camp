@@ -2,9 +2,14 @@ import React from 'react';
 import './SingleTopics.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useNavigate } from "react-router-dom";
 
 const SingleTopics = ({ catagories }) => {
     const { id, name, logo, total } = catagories;
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate(`/topics/${id}`);
+    }
     return (
         <div >
             <Card className=' cards text-white mt-5 mb-5' >
@@ -16,7 +21,8 @@ const SingleTopics = ({ catagories }) => {
                             <i className="fa-duotone fa-head-side-brain ms-2"></i>
                             <p className='ms-2 mt-3'>{total}</p>
                         </div>
-                        <div className='col-8 practice-button-area'><Button variant="primary">Practice</Button></div>
+                        <div className='col-8 practice-button-area'>
+                            <Button variant="primary" onClick={handleClick}>Practice</Button></div>
                     </div>
                 </Card.Body>
             </Card>
