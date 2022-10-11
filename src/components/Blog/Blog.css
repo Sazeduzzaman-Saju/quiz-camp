@@ -1,0 +1,13 @@
+.accordion-button {
+  background-color: var(--secondary-color) !important;
+  color: white;
+  box-shadow: 0px;
+}
+
+.accordion-button:not(.collapsed) {
+  color: white !important;
+}
+
+button:focus:not(:focus-visible) {
+  box-shadow: none;
+}
