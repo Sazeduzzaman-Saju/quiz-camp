@@ -1,0 +1,8 @@
+.recharts-polygon {
+  stroke: var(--main-color);
+  fill: rgb(147, 19, 179);
+  fill-opacity: 0.6;
+}
+.recharts-tooltip-wrapper {
+  background-color: red !important;
+}

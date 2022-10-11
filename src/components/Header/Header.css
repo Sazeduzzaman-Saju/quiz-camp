@@ -23,3 +23,6 @@
 .top-tool {
   background-color: var(--secondary-color);
 }
+.icon {
+  color: var(--secondary-color);
+}

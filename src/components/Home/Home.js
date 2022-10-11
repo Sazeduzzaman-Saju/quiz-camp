@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <div className=''>
-            <section className='container mt-5 '>
+            <section className='container mt-5 ' data-aos="fade-up-left" data-aos-duration="1500">
                 <div className='row d-flex justify-content-center align-items-center'>
                     <div className='col-lg-6 col-md-6 col-sm-1 '>
                         <div className='hero-info'>

@@ -6,8 +6,8 @@ import Card from 'react-bootstrap/Card';
 const SingleTopics = ({ catagories }) => {
     const { id, name, logo, total } = catagories;
     return (
-        <div>
-            <Card className=' cards text-white mt-5 mb-5'>
+        <div >
+            <Card className=' cards text-white mt-5 mb-5' >
                 <Card.Img variant="top" src={logo} />
                 <Card.Body>
                     <div className='text-center'><Card.Title>{name}</Card.Title></div>

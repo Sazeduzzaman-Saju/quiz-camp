@@ -30,7 +30,7 @@ function Header() {
                                     <NavLink to="blog">Blog</NavLink>
                                 </Nav>
                                 <div>
-                                    <i className="fa-duotone fa-user"></i><span className='ms-2'>User</span>
+                                    <i className="fa-duotone fa-user icon"></i><span className='ms-2'>User</span>
                                 </div>
                             </Navbar.Collapse>
                         </Container>
