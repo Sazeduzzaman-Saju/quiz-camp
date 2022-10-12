@@ -3,3 +3,8 @@
   fill: #5e17eb;
   fill-opacity: 0.6;
 }
+
+.chart {
+  width: 750px;
+  height: 550px;
+}

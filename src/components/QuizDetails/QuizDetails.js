@@ -15,7 +15,7 @@ const QuizDetails = () => {
             <div className='container quiz-container'>
                 {questions.map(qu => <QuizArea
                     key={qu.id}
-                    qu={qu}></QuizArea>)}
+                    qu={qu} data={data}></QuizArea>)}
             </div>
         </div>
     );

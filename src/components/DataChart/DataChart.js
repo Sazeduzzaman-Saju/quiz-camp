@@ -11,7 +11,8 @@ const DataChart = ({ ChartData }) => {
 
         <div>
             <div className='container mt-5 mb-3'>
-                <div className='d-flex justify-content-center align-items-center' >
+                <div className='d-flex justify-content-center align-items-center wrapper' >
+
                     <RadarChart outerRadius={190} width={730} height={550} data={data}>
                         <PolarGrid />
                         <PolarAngleAxis dataKey="name" />

@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './QuizArea.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
-const QuizArea = ({ qu }) => {
+const QuizArea = ({ qu, data }) => {
     console.log(qu)
-    const { question, correctAnswer, options } = qu;
+    const { total, question, correctAnswer, options } = qu;
 
     const toastId = React.useRef(null);
 
@@ -14,6 +14,20 @@ const QuizArea = ({ qu }) => {
         if (!toast.isActive(toastId.current)) {
             toastId.current = toast(correctAnswer);
         }
+    }
+    const [selected, setSelected] = useState()
+
+    const handleSelected = (i) => {
+        if (selected === i && selected === correctAnswer) {
+            return "select";
+        } else if (selected === i && selected !== correctAnswer) {
+            return "wrong";
+        } else if (i === correctAnswer) {
+            return "select";
+        }
+    }
+    const handleCheck = (i) => {
+        setSelected(i)
     }
     return (
         <div>
@@ -27,25 +41,21 @@ const QuizArea = ({ qu }) => {
                 </div>
                 <div className='row p-3 text-black'>
                     <div className=''>
-                        <h5 className='text-center questions-title mb-3'>{question}</h5>
-                        <div className='p-2 mb-2 question-option'>
-                            <input type="radio" value="Male" name="gender" /> {options[0]}
-                        </div>
-                        <div className='p-2 mb-2 question-option'>
-                            <input type="radio" value="Male" name="gender" /> {options[1]}
-                        </div>
-                        <div className='p-2 mb-2 question-option'>
-                            <input type="radio" value="Male" name="gender" /> {options[2]}
-                        </div>
-                        <div className='p-2 mb-2 question-option'>
-                            <input type="radio" value="Male" name="gender" /> {options[3]}
+                        <h3 className='text-primary'>{data.indexof}</h3>
+                        <h5 className='text-center questions-title mb-3'>{question.slice(3,)}</h5>
+                        <div className='button-container'>
+                            {options.map(answerOption => <button
+                                onClick={() => handleCheck(answerOption)} className={`quiz-button ${selected && handleSelected(answerOption)}`}
+                                key={answerOption}
+                                disabled={selected}
+                            >{answerOption}</button>)}
                         </div>
                     </div>
 
                 </div>
             </div>
             <ToastContainer />
-        </div>
+        </div >
     );
 };
 
