@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import './QuizArea.css';
-import { toast } from 'react-toastify';
+import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import swal from 'sweetalert';
 
 
 const QuizArea = ({ qu, data }) => {
     console.log(qu)
     const { question, correctAnswer, options } = qu;
-
+    const alerts = () => {
+        swal("This modal will disappear soon!", {
+            buttons: false,
+            timer: 3000,
+        });
+    }
     const notify = () => {
-        toast('🦄 Wow so easy!', {
+        toast(correctAnswer, {
             position: "top-center",
             autoClose: 5000,
             hideProgressBar: false,
@@ -26,10 +32,11 @@ const QuizArea = ({ qu, data }) => {
         if (selected === i && selected === correctAnswer) {
             return "select";
         } else if (selected === i && selected !== correctAnswer) {
-            toast('Wrong Answer')
+            swal("Oops", "Wrong Answer!", "error")
             return "wrong";
         } else if (i === correctAnswer) {
             return "select";
+        } else {
         }
     }
     const handleCheck = (i) => {
@@ -48,7 +55,12 @@ const QuizArea = ({ qu, data }) => {
                 <div className='row p-3 text-black'>
                     <div className=''>
                         <h3 className='text-primary'>{data.indexof}</h3>
-                        <h5 className='text-center questions-title mb-3'>{question.slice(3, -4)}</h5>
+
+                        {/* Slice Question for remove <p></p>,
+                         Tag so first=> 3(<p>) and last=> -4(</p>) */}
+
+                        <h5 className='text-center questions-title mb-3'>{question.slice(3, -4)}.</h5>
+
                         <div className='button-container'>
                             {options.map(answerOption => <button
                                 onClick={() => handleCheck(answerOption)} className={`quiz-button ${selected && handleSelected(answerOption)}`}
@@ -59,7 +71,14 @@ const QuizArea = ({ qu, data }) => {
                     </div>
 
                 </div>
-
+                <ToastContainer
+                    position="top-center"
+                    autoClose={5000}
+                    limit={1}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnHover
+                />
             </div>
         </div >
     );
