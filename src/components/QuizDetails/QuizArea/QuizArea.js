@@ -19,10 +19,10 @@ const QuizArea = ({ qu, data }) => {
             return "select";
         } else if (selected === i && selected !== correctAnswer) {
             swal.fire({
-                title: 'Error!',
-                text: 'Do you want to continue',
+                title: 'Wrong Answer!',
+                text: 'Please See The Correct Answer',
                 icon: 'error',
-                confirmButtonText: 'Cool'
+                confirmButtonText: 'ok'
             })
             return "wrong";
         } else if (i === correctAnswer) {
