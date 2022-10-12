@@ -1,5 +1,5 @@
 import React from 'react';
-import DataChart from '../DataChart/DataChart';
+import DataChart from './DataChart/DataChart';
 import { useLoaderData } from 'react-router-dom';
 
 const Statistic = () => {

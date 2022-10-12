@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './QuizArea.css';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -8,12 +8,17 @@ const QuizArea = ({ qu, data }) => {
     console.log(qu)
     const { question, correctAnswer, options } = qu;
 
-    const toastId = React.useRef(null);
-
     const notify = () => {
-        if (!toast.isActive(toastId.current)) {
-            toastId.current = toast(correctAnswer);
-        }
+        toast('🦄 Wow so easy!', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+        });
     }
     const [selected, setSelected] = useState()
 
@@ -37,7 +42,7 @@ const QuizArea = ({ qu, data }) => {
                     <div className='col-lg-9 text-primary'>
                     </div>
                     <div className='col-lg-3 text-end'>
-                        <button onClick={notify} className='border-0 mt-2 bg-transparent text-end bg-primary'><span className=''>Show</span><i class="fa-solid fa-eye-slash fs-5 eye-icons ms-2"></i></button>
+                        <button onClick={notify} className='border-0 mt-2 bg-transparent text-end bg-primary'><span className=''>Show</span><i className="fa-solid fa-eye-slash fs-5 eye-icons ms-2"></i></button>
                     </div>
                 </div>
                 <div className='row p-3 text-black'>
@@ -54,8 +59,8 @@ const QuizArea = ({ qu, data }) => {
                     </div>
 
                 </div>
+
             </div>
-            <ToastContainer limit={-1} />
         </div >
     );
 };

@@ -47,3 +47,19 @@
     transform: translateY(-10px);
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .hero-info {
+    text-align: center;
+  }
+  .hero-info p {
+    text-align: center;
+    width: 100% !important;
+  }
+  .hero-info h1 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+  }
+}

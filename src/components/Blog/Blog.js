@@ -6,7 +6,7 @@ const Blog = () => {
     return (
         <div className='container d-flex justify-content-center align-items-center flex-column '>
             <h1 className='text-center mt-5 mb-5 topics-headline' data-aos="fade-up-left" data-aos-duration="1500">The answer to Some <br />Important Questions!</h1>
-            <div className='w-50' data-aos="fade-up-left" data-aos-duration="3000">
+            <div className='w-50 accordion-div' data-aos="fade-up-left" data-aos-duration="3000">
                 <Accordion defaultActiveKey={['0']} alwaysOpen >
                     <Accordion.Item eventKey="0" className='shadow-lg'>
                         <Accordion.Header className='accordions-header'>What is the purpose of React Router ?</Accordion.Header>
