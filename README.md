@@ -1,8 +1,20 @@
 # QuizCamp 🚀
 
-### Simplest way to open QuizCamp
+### About Quiz Camp
 
-## 📙 Requirement
+\*\* This is Quiz Web App . When you open the project you will see some little helpful quiz.Try it hope you like it.All quizzes are totally programming related.
+It would be nice to start without delay .It will be very convenient to read the code.
+So hope you would like . Enjoy🤠
+
+## ⚖️ I Use In This Project.
+
+- HTML.
+- CSS.
+- Bootstrap.
+- React Js.
+- AOS ANIMATION.
+
+## 📙 Need To do.
 
 - Make sure you have Node.js & Code Editor.
 - Clone or Download Quiz Camp WebApp.
@@ -11,21 +23,17 @@
 - Runs the app in the development mode.\
   Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## 📙 Requirement
-
-- Make sure you have [PHP 8.0](https://www.php.net/releases/8_0_0.php) or a higher version installed.
-
 ## ⚙️ Setup
 
 - Open Windows Terminal Or Vs Code Terminal
 
-- Install the dependencies with composer as below
+- Install the dependencies with npm package.
 
   ```bash
   npm install
   ```
 
-- if need then type and hit enter vs code will open automatic.
+- if need vs code then type and hit enter and it will open automatic.
 
   ```bash
   npm code .
@@ -48,12 +56,4 @@
 
 [![Sazeduzzaman Saju](https://avatars.githubusercontent.com/u/107988750?s=400&u=e6802371dcb0d4b678987f132665517ca9293b94&v=4)]
 
-\*\*Sazeduzzaman Saju, a highly passionate, zen &amp; pragmatic front-end developer 😊
-
-## ⚖️ I Use In This Project.
-
-- HTML.
-- CSS.
-- Bootstrap.
-- React Js.
-- AOS ANIMATION.
+\*\*Sazeduzzaman Saju, a highly passionate front-end developer 😊
