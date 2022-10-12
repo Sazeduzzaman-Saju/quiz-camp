@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, Link } from 'react-router-dom';
 import QuizArea from './QuizArea/QuizArea';
 import './QuizDetails.css';
 
@@ -16,6 +16,9 @@ const QuizDetails = () => {
                 {questions.map(qu => <QuizArea
                     key={qu.id}
                     qu={qu} data={data}></QuizArea>)}
+            </div>
+            <div className='text-center mt-5'>
+                <Link to='/topics'><button className='btns'>Take A Quiz</button></Link>
             </div>
         </div>
     );

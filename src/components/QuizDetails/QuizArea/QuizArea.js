@@ -1,4 +1,4 @@
-import React, { useState, location } from 'react';
+import React, { useState } from 'react';
 import './QuizArea.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -23,12 +23,7 @@ const QuizArea = ({ qu, data }) => {
                 text: 'Do you want to continue',
                 icon: 'error',
                 confirmButtonText: 'Cool'
-            }).then(function () {
-
-                location.reload();
-                return false;
-
-            });
+            })
             return "wrong";
         } else if (i === correctAnswer) {
             return "select";
