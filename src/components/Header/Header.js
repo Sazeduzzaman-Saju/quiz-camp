@@ -27,8 +27,8 @@ function Header() {
                                 >
                                     <NavLink to="home">Home</NavLink>
                                     <NavLink to="topics">Topics</NavLink>
-                                    <NavLink to="statistic">Statistic</NavLink>
                                     <NavLink to="blog">Blog</NavLink>
+                                    <NavLink to="statistic">Statistic</NavLink>
                                 </Nav>
                                 <div>
                                     <i className="fa-duotone fa-user icon"></i><span className='ms-2'>User</span>

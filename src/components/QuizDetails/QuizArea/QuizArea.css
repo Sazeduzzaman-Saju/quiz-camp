@@ -163,24 +163,27 @@
   border: none;
 }
 
-.swal-modal {
-  background-color: var(--secondary-color);
+.swal2-popup {
+  background-color: var(--secondary-color) !important;
 }
-.swal-text {
-  color: white;
+.swal2-html-container {
+  color: white !important;
 }
-.swal-title {
-  color: white;
+.swal2-title {
+  color: white !important;
 }
-.swal-icon--error__line {
-  background-color: white;
+.swal2-x-mark-line-left {
+  background-color: white !important;
 }
-.swal-icon--error {
-  border-color: white;
+.swal2-x-mark-line-right {
+  background-color: white !important;
 }
-.swal-button {
-  background-color: white;
-  color: var(--secondary-color);
+.swal2-icon {
+  border-color: white !important;
+}
+.swal2-confirm {
+  background-color: white !important;
+  color: var(--secondary-color) !important;
   border: none;
   box-shadow: none;
   border-radius: 5px;
@@ -190,6 +193,9 @@
   margin: 0;
   cursor: pointer;
   transition: 0.6s;
+}
+.swal2-confirm:hover {
+  color: var(--secondary-color) !important;
 }
 @media only screen and (max-width: 600px) {
   .swal-overlay {

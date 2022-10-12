@@ -1,19 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState, location } from 'react';
 import './QuizArea.css';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import swal from 'sweetalert';
-
+import swal from 'sweetalert2'
 
 const QuizArea = ({ qu, data }) => {
-    console.log(qu)
+    // Destructuring  Data from loader
     const { question, correctAnswer, options } = qu;
-    const alerts = () => {
-        swal("This modal will disappear soon!", {
-            buttons: false,
-            timer: 3000,
-        });
+    // Validate Question Option=> Right Or Wrong
+    const [selected, setSelected] = useState()
+
+    const handleCheck = (i) => {
+        setSelected(i);
     }
+
+    const handleSelected = (i) => {
+        if (selected === i && selected === correctAnswer) {
+            return "select";
+        } else if (selected === i && selected !== correctAnswer) {
+            swal.fire({
+                title: 'Error!',
+                text: 'Do you want to continue',
+                icon: 'error',
+                confirmButtonText: 'Cool'
+            }).then(function () {
+
+                location.reload();
+                return false;
+
+            });
+            return "wrong";
+        } else if (i === correctAnswer) {
+            return "select";
+        }
+    }
+
+    // Show the Answer when button clicked 
     const notify = () => {
         toast(correctAnswer, {
             position: "top-center",
@@ -26,22 +48,7 @@ const QuizArea = ({ qu, data }) => {
             theme: "light",
         });
     }
-    const [selected, setSelected] = useState()
 
-    const handleSelected = (i) => {
-        if (selected === i && selected === correctAnswer) {
-            return "select";
-        } else if (selected === i && selected !== correctAnswer) {
-            swal("Oops", "Wrong Answer!", "error")
-            return "wrong";
-        } else if (i === correctAnswer) {
-            return "select";
-        } else {
-        }
-    }
-    const handleCheck = (i) => {
-        setSelected(i)
-    }
     return (
         <div>
             <div className="container shadow-lg quiz-area w-50 " data-aos="fade-up-left" data-aos-duration="1500">
@@ -71,16 +78,17 @@ const QuizArea = ({ qu, data }) => {
                     </div>
 
                 </div>
-                <ToastContainer
-                    position="top-center"
-                    autoClose={5000}
-                    limit={1}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnHover
-                />
             </div>
-        </div >
+            <ToastContainer
+                position="top-center"
+                autoClose={1000}
+                limit={1}
+                closeOnClick
+                rtl={false}
+                pauseOnHover
+            />
+
+        </div>
     );
 };
 
