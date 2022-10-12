@@ -1,33 +1,59 @@
-# Quiz Camp : Programming Quiz Test
+# QuizCamp 🚀
 
-Css Library :
+### Simplest way to open QuizCamp
 
-### Bootstrap v5.2
+## 📙 Requirement
 
-### FontAwesome v6
+- Make sure you have Node.js & Code Editor.
+- Clone or Download Quiz Camp WebApp.
+- Open the project in Vs Code / windows or terminal
+- Simple Install npm Package.
+- Runs the app in the development mode.\
+  Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-React Package :
+## 📙 Requirement
 
-### React-Router-Dom
+- Make sure you have [PHP 8.0](https://www.php.net/releases/8_0_0.php) or a higher version installed.
 
-## What You Need To Do:
+## ⚙️ Setup
 
-In the project directory, open terminal/cmd and run the code:
+- Open Windows Terminal Or Vs Code Terminal
 
-### `npm start`
+- Install the dependencies with composer as below
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  ```bash
+  npm install
+  ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- if need then type and hit enter vs code will open automatic.
 
-### `npm run build`
+  ```bash
+  npm code .
+  ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Run the Project, and follow the instruction shown. Enjoy 😺
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  ```bash
+  npm start
+  ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Builds the app for production to the `build` folder.\
+  It correctly bundles React in production mode and optimizes the build for the best performance
+
+  ```bash
+  npm run build
+  ```
+
+## 🤠 About Me
+
+[![Sazeduzzaman Saju](https://avatars.githubusercontent.com/u/107988750?s=400&u=e6802371dcb0d4b678987f132665517ca9293b94&v=4)]
+
+\*\*Sazeduzzaman Saju, a highly passionate, zen &amp; pragmatic front-end developer 😊
+
+## ⚖️ I Use In This Project.
+
+- HTML.
+- CSS.
+- Bootstrap.
+- React Js.
+- AOS ANIMATION.

@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const QuizArea = ({ qu, data }) => {
     console.log(qu)
-    const { total, question, correctAnswer, options } = qu;
+    const { question, correctAnswer, options } = qu;
 
     const toastId = React.useRef(null);
 
@@ -21,6 +21,7 @@ const QuizArea = ({ qu, data }) => {
         if (selected === i && selected === correctAnswer) {
             return "select";
         } else if (selected === i && selected !== correctAnswer) {
+            toast('Wrong Answer')
             return "wrong";
         } else if (i === correctAnswer) {
             return "select";
@@ -36,13 +37,13 @@ const QuizArea = ({ qu, data }) => {
                     <div className='col-lg-9 text-primary'>
                     </div>
                     <div className='col-lg-3 text-end'>
-                        <button onClick={notify} className='border-0 mt-2 bg-transparent text-end bg-primary'><span className=''>Ans</span><i class="fa-solid fa-eye-slash fs-5 eye-icons ms-2"></i></button>
+                        <button onClick={notify} className='border-0 mt-2 bg-transparent text-end bg-primary'><span className=''>Show</span><i class="fa-solid fa-eye-slash fs-5 eye-icons ms-2"></i></button>
                     </div>
                 </div>
                 <div className='row p-3 text-black'>
                     <div className=''>
                         <h3 className='text-primary'>{data.indexof}</h3>
-                        <h5 className='text-center questions-title mb-3'>{question.slice(3,)}</h5>
+                        <h5 className='text-center questions-title mb-3'>{question.slice(3, -4)}</h5>
                         <div className='button-container'>
                             {options.map(answerOption => <button
                                 onClick={() => handleCheck(answerOption)} className={`quiz-button ${selected && handleSelected(answerOption)}`}
@@ -54,7 +55,7 @@ const QuizArea = ({ qu, data }) => {
 
                 </div>
             </div>
-            <ToastContainer />
+            <ToastContainer limit={-1} />
         </div >
     );
 };

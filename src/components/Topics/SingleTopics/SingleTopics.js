@@ -22,7 +22,7 @@ const SingleTopics = ({ catagories }) => {
                             <p className='ms-2 mt-3'>{total}</p>
                         </div>
                         <div className='col-8 practice-button-area'>
-                            <Button variant="primary" onClick={handleClick}>Practice</Button></div>
+                            <Button className="practice-btn" onClick={handleClick}>Practice</Button></div>
                     </div>
                 </Card.Body>
             </Card>
